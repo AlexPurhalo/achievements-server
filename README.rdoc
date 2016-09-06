@@ -1,0 +1,10 @@
+<h3>Instruction</h3>
+<ul>
+    <li>bundle install</li>
+    <li>rake db:migrate</li>
+    <li>rake db:seed</li>
+</ul>
+<h3>Progress</h3>
+<ul>
+    <li>create User throw console and ensure that it was created</li>
+</ul>

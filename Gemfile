@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.6'
 gem 'sqlite3', '~> 1.3', '>= 1.3.11'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'devise', '~> 3.4.1'
 
 group :development, :test do
   gem 'byebug'
