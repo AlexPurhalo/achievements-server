@@ -6,5 +6,6 @@
 </ul>
 <h3>Progress</h3>
 <ul>
-    <li>create User throw console and ensure that it was created</li>
+    <li>In Postman for http://localhost:3000/persons path send GET request</li>
+    <li>As output there should be object with users that stock user's id and email</li>
 </ul>
