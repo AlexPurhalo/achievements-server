@@ -6,6 +6,9 @@
 </ul>
 <h3>Progress</h3>
 <ul>
-    <li>In Postman for http://localhost:3000/persons path send GET request</li>
-    <li>As output there should be object with users that stock user's id and email</li>
+    <li>$ curl -X POST -H "Content-Type: application/json" -d '{"email": "tarakan@mail.com", "password": "abagalamaga"}' http://localhost:3000/sign_in</li>
+    <li>output: {"email":"tarakan@mail.com","token_type":"Bearer","user_id":4,"access_token":"dsfsdfofsfmkdf"}</li>
+    <li>Or in Post Man choice POST request for http://localhost:3000/sign_in</li>
+    <li>as body use: {"email": "tarakan@mail.com", "password": "abagalamaga"}</li>
+    <li>output: {"email":"tarakan@mail.com","token_type":"Bearer","user_id":4,"access_token":"dsfsdfofsfmkdf"}</li>
 </ul>

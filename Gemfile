@@ -6,6 +6,8 @@ gem 'sqlite3', '~> 1.3', '>= 1.3.11'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise', '~> 3.4.1'
 gem 'rack-cors', require: 'rack/cors'
+gem 'rails-api', '~> 0.4.0'
+gem 'active_model_serializers', '~> 0.8.3'
 
 group :development, :test do
   gem 'byebug'
