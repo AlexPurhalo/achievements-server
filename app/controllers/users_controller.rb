@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user_from_token, only: [:destroy]
+
   def index
     @users = User.all
     render json: @users
@@ -21,17 +23,21 @@ class UsersController < ApplicationController
 
   def destroy
     @user = User.find(params[:id])
+    @user.destroy
 
-    if request.headers['authorization'] === @user.access_token
-      @user.destroy
-      render json: { message: 'User was destroyed' }
-    else
-      render json: { error: 'Failed to confirm person' }
-    end
+    render json: { message: 'User was destroyed' }
   end
 
   private
   def user_params
     params.require(:user).permit(:email, :password)
+  end
+
+  def authenticate_user_from_token
+    @user = User.find(params[:id])
+
+    unless request.headers['authorization'] === @user.access_token
+      render json: { error: 'Failed to confirm person' }
+    end
   end
 end
