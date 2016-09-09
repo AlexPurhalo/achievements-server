@@ -6,6 +6,6 @@
 </ul>
 <h3>Progress</h3>
 <ul>
-    <li>In Post man create GET request to http://localhost:3000/users/1 page</li>
-    <li>As output: info about single person</li>
+    <li>In Post man create DELETE request to http://localhost:3000/users/1 page</li>
+    <li>See that user was deleted from db</li>
 </ul>
