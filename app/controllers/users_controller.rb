@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user_from_token, only: [:destroy]
+  before_action :authenticate_user_from_token, only: [:destroy, :update]
 
   def index
     @users = User.all
@@ -21,6 +21,16 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+    @user = User.find(params[:id])
+
+    if @user.update(user_params)
+      render json: @user
+    else
+      render json: { error: ('Email in use') }, status: :unprocessable_entity
+    end
+  end
+
   def destroy
     @user = User.find(params[:id])
     @user.destroy
@@ -30,7 +40,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:email, :password)
+    params.require(:user).permit(:email, :password, :name)
   end
 
   def authenticate_user_from_token
