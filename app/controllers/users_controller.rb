@@ -21,7 +21,13 @@ class UsersController < ApplicationController
 
   def destroy
     @user = User.find(params[:id])
-    @user.destroy
+
+    if request.headers['authorization'] === @user.access_token
+      @user.destroy
+      render json: { message: 'User was destroyed' }
+    else
+      render json: { error: 'Failed to confirm person' }
+    end
   end
 
   private
