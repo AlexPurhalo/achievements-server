@@ -2,8 +2,9 @@ class UsersController < ApplicationController
   before_action :authenticate_user_from_token, only: [:destroy, :update]
 
   def index
-    @users = User.all
-    render json: @users
+    users = User.all
+
+    paginate json: users, per_page: 10
   end
 
   def show
