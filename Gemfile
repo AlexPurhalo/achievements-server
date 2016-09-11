@@ -9,12 +9,12 @@ gem 'rack-cors', require: 'rack/cors'
 gem 'rails-api', '~> 0.4.0'
 gem 'active_model_serializers', '~> 0.8.3'
 
-gem 'grape', '>= 0.10.0'
+# gem 'grape', '>= 0.10.0'
 # Then choose your preferred paginator from the following:
 gem 'kaminari'
 # Finally...
-gem 'api-pagination'
-
+# gem 'api-pagination'
+gem 'pager_api'
 group :development, :test do
   gem 'byebug'
 end

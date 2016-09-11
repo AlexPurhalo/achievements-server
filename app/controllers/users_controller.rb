@@ -2,9 +2,12 @@ class UsersController < ApplicationController
   before_action :authenticate_user_from_token, only: [:destroy, :update]
 
   def index
-    users = User.all
-
-    paginate json: users, per_page: 10
+    users = User.page(params[:page]).per(10)
+    render  json: users, meta: { pagination: {
+        per_page: 10,
+        total_pages: users.total_count % 10 === 0? users.total_count / 10 : users.total_count / 10 + 1,
+        total_objects: users.total_count
+    } }
   end
 
   def show
