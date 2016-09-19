@@ -6,8 +6,14 @@
 </ul>
 <h3>Progress</h3>
 <ul>
-    <li>Check pagination, in Post man use examples of GET requests:</li>
-    <li>http://localhost:3000/users?page=3</li>
-    <li>http://localhost:3000/users?page=1</li>
-    <li>Check that sended object has meta object that contains info about pagination</li>
+    <li>
+        <p>Go to console and create user with image</p>
+        <p>User.create(email: "alex@mail.com", name: "Alexander Purkhalo", password: "ppppppppp", picture: File.open("image.jpg", "rb"))</p>
+        <p>User.last.picture.url</p>
+    </li>
+    <li>
+        <p>Update user's image</p>
+        <p>User.last.picture =  File.open("new_image.jpg", "rb")</p>
+        <p>User.last.picture.url</p>
+    </li>
 </ul>

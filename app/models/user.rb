@@ -23,4 +23,7 @@ class User < ActiveRecord::Base
       break token unless User.where(access_token: token).first
     end
   end
+
+  # picture uploading settings
+  mount_uploader :picture, PictureUploader
 end
