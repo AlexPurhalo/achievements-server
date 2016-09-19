@@ -25,3 +25,4 @@ group :development do
 end
 
 gem 'carrierwave'
+gem 'carrierwave-base64'

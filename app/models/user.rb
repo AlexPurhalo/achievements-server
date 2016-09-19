@@ -25,5 +25,5 @@ class User < ActiveRecord::Base
   end
 
   # picture uploading settings
-  mount_uploader :picture, PictureUploader
+  mount_base64_uploader :picture, PictureUploader
 end
