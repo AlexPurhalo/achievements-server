@@ -26,4 +26,7 @@ class User < ActiveRecord::Base
 
   # picture uploading settings
   mount_base64_uploader :picture, PictureUploader
+
+  # achievements relationship
+  has_many :achievements
 end
