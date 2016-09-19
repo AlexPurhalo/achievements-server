@@ -18,4 +18,22 @@
         <p>Checkout picture</p>
         <img src="https://raw.githubusercontent.com/AlexPurhalo/achievements-server/master/tutorial/picture-upload.png"/>
     </li>
+     <li>
+            <p>Go to Amazon console and pass authorization</p>
+            <p>Go to S3 and create bucket</p>
+            <p>Generate secret key in Security Credentials section</p>
+        </li>
+        <li><p>Figaro setup</p>
+            <ul>
+                <li>$ bundle exec figaro install</li>
+                <li>Go to created config/application.yml fil and setup variables</li>
+                <ul>
+                    <li>S3_BUCKET_NAME: 'your-bucket-name-here'</li>
+                    <li>AWS_ACCESS_KEY_ID: 'your-key-here'</li>
+                    <li>AWS_SECRET_ACCESS_KEY: 'your-secret-key-here'</li>
+                    <li>AWS_REGION: 'your-region-here'</li>
+                </ul>
+                <li>Create record and check that it has stokcs from S3</li>        
+            </ul>
+        </li>
 </ul>
