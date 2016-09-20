@@ -2,7 +2,9 @@ source 'https://rubygems.org'
 
 
 gem 'rails', '4.2.6'
-gem 'sqlite3', '~> 1.3', '>= 1.3.11'
+gem 'sqlite3', '~> 1.3', '>= 1.3.11', group: :development
+gem 'pg', '0.18.1', group: :production
+gem 'rails_12factor', group: :production
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise', '~> 3.4.1'
 gem 'rack-cors', require: 'rack/cors'
