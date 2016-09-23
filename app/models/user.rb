@@ -29,4 +29,7 @@ class User < ActiveRecord::Base
 
   # achievements relationship
   has_many :achievements
+
+  # skills references
+  has_many :skills
 end

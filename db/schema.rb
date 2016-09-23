@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160919161529) do
+ActiveRecord::Schema.define(version: 20160923211656) do
 
   create_table "achievements", force: :cascade do |t|
     t.integer  "user_id"
@@ -21,6 +21,15 @@ ActiveRecord::Schema.define(version: 20160919161529) do
   end
 
   add_index "achievements", ["user_id"], name: "index_achievements_on_user_id"
+
+  create_table "skills", force: :cascade do |t|
+    t.string   "body"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "skills", ["user_id"], name: "index_skills_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -42,6 +51,9 @@ ActiveRecord::Schema.define(version: 20160919161529) do
     t.integer  "age"
     t.string   "skype"
     t.string   "mobile"
+    t.string   "city"
+    t.string   "linkedin"
+    t.string   "github"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
