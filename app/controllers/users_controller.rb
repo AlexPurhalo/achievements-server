@@ -44,7 +44,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:email, :password, :name, :picture, :profile, :age, :skype, :mobile)
+    params.require(:user).permit(:email, :password, :name, :picture, :profile, :age, :city, :skype, :mobile, :linkedin, :github)
   end
 
   def authenticate_user_from_token
