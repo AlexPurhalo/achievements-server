@@ -32,4 +32,7 @@ class User < ActiveRecord::Base
 
   # skills references
   has_many :skills
+
+  # works references
+  has_many :works
 end

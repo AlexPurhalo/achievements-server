@@ -11,6 +11,7 @@ class AchievementsController < ApplicationController
   def show
     @user = User.find(params[:user_id])
     @achievements = @user.achievements
+    @achievement = @achievements.find(params[:id])
     render json: @achievement
   end
 
